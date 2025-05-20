@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+application {
+    mainClass = 'com.example.Main' // Replace this with your actual main class
+}
+
+
+group = 'com.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation 'org.testng:testng:7.10.1'
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.31.0'
+
+}
+
+test {
+    useJUnitPlatform()
+    useTestNG()
+
+
+
+}
